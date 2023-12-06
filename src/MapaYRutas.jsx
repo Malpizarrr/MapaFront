@@ -506,7 +506,6 @@ class MapaYRutas extends Component {
                         <div className={"form-group-choose"}>
                             <button onClick={() => this.setState({ modoRuta: 'DRIVING' })}>Modo Vehículo</button>
                             <button onClick={() => this.setState({ modoRuta: 'WALKING' })}>Modo Peatonal</button>
-                            <button onClick={() => this.setState({ modoRuta: 'BICYCLING' })}>Modo Ciclista</button>
                             <button onClick={() => this.setState({ modoRuta: 'TRANSIT' })}>Modo Transporte Público</button>
                         </div>
                     </form>

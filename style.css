@@ -1,3 +1,4 @@
+/* Estilos base para todo el cuerpo del documento */
 body {
 	font-family: 'Arial', sans-serif;
 	margin: 0;
@@ -6,26 +7,29 @@ body {
 	color: #333;
 }
 
+/* Estilos para el contenedor principal */
 .container {
 	display: flex;
-	flex-wrap: no-wrap; /* No permitir que los hijos se envuelvan */
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: flex-start;
 	margin: 20px;
-	height: 100vh; /* Ajustar al alto de la pantalla */
+	height: 100vh;
 }
 
+/* Estilos para el contenedor del mapa */
 .map-container {
-	flex: 1; /* Permitir que el mapa crezca */
-	height: 100%; /* Ajustar al alto del contenedor */
-	margin-right: 20px; /* Espaciado entre las columnas */
+	flex: 1;
+	height: 100%;
+	margin-right: 20px;
 }
 
+/* Estilos para el contenedor de formularios y tablas */
 .formularios-tablas {
-	flex: 1; /* Permitir que este contenedor crezca */
+	flex: 1;
 	padding: 20px;
-	overflow-y: auto; /* Permitir desplazamiento si el contenido es muy alto */
-	height: 100%; /* Ajustar al alto del contenedor */
+	overflow-y: auto;
+	height: 100%;
 }
 
 h1 {
@@ -52,9 +56,10 @@ h2 {
 	color: #555;
 }
 
+/* Estilos consistentes para entradas y botones */
 .form-group input, .form-group button {
-	width: 100%;
-	padding: 10px 15px;
+	width: calc(100% - 20px); /* Calcula el ancho menos el padding para consistencia */
+	padding: 10px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	font-size: 1em;
@@ -67,36 +72,46 @@ h2 {
 }
 
 .form-group button {
+	width: 100%;
 	background-color: #5cb85c;
 	color: white;
 	border: none;
 	cursor: pointer;
-	transition: background-color 0.3s;
+	transition: background-color 0.3s, transform 0.1s;
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 1px;
+
 }
 
 .form-group button:hover {
 	background-color: #4cae4c;
+	transform: scale(1.02);
+}
+
+.form-group button:active {
+	background-color: #3e8e41;
+	transform: scale(0.98);
 }
 
 .form-group-choose {
 	display: flex;
-	justify-content: center;
-	gap: 10px; /* Espacio entre los botones */
-	margin-bottom: 20px;
+	justify-content: space-around; /* Espacio distribuido uniformemente */
+	align-items: center;
+	padding: 0;
 }
 
 .form-group-choose button {
 	background-color: #4CAF50; /* Color de fondo verde */
 	color: white; /* Texto blanco */
-	padding: 10px 20px; /* Espaciado interno */
 	border: none; /* Sin bordes */
-	border-radius: 5px; /* Bordes redondeados */
 	cursor: pointer; /* Cursor en forma de mano */
 	font-size: 16px; /* Tamaño del texto */
-	transition: background-color 0.3s, transform 0.3s; /* Transición suave para el fondo y la transformación */
+	transition: background-color 0.3s, transform 0.3s;
+	flex: 1; /* Cada botón crece igualmente */
+	margin: 0 10px; /* Espaciado simétrico */
+	padding: 10px 10px;
+	border-radius: 5px;
 }
 
 .form-group-choose button:hover {
@@ -138,4 +153,65 @@ th {
 
 tr:nth-child(even) {
 	background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		flex-direction: column; /* Cambio a disposición en columna */
+		align-items: center; /* Centrar los elementos horizontalmente */
+	}
+
+	.map-container, .formularios-tablas {
+		width: 100%; /* Ancho completo para cada sección */
+		height: auto; /* Altura automática para cada sección */
+		margin-right: 0; /* Quitar margen derecho */
+	}
+
+	.formularios-tablas {
+		padding: 10px; /* Padding ajustado */
+	}
+}
+
+/* Media queries para celulares */
+@media screen and (max-width: 480px) {
+	body {
+		font-size: 14px; /* Tamaño de fuente más pequeño */
+	}
+
+	h1 {
+		font-size: 1.5em; /* Tamaño de fuente más pequeño para h1 */
+	}
+
+	.container {
+		margin: 10px; /* Margen más pequeño */
+		align-items: center; /* Centrar los elementos horizontalmente */
+	}
+
+	.form-group input, .form-group button {
+		padding: 8px 8px; /* Padding más pequeño */
+		font-size: 0.9em; /* Tamaño de fuente más pequeño */
+	}
+
+	.form-group button {
+		width: 100%; /* Ancho más pequeño */
+	}
+
+	.form-group-choose button {
+		padding: 8px 15px; /* Padding más pequeño */
+		font-size: 14px; /* Tamaño de fuente más pequeño */
+	}
+
+	.form-group label, th, td {
+		font-size: 0.8em; /* Tamaño de fuente más pequeño */
+	}
+
+	.formularios-tablas {
+		width: 100%; /* Ancho completo */
+		margin-bottom: 10px; /* Margen inferior para separar secciones */
+		padding: 10px; /* Padding ajustado */
+	}
+
+	.map-container {
+		margin-bottom: 10px; /* Margen inferior para el mapa */
+	}
 }
