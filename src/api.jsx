@@ -54,7 +54,7 @@ export const obtenerAristasAPI = () => {
 };
 
 export const eliminarNodoAPI = (id) => {
-    return fetch(root_url+"/nodos/{id}"+id, {
+    return fetch(root_url+"/nodos/"+id, {
         method: 'DELETE'
     }).then(response => {
         if (!response.ok) {
@@ -73,7 +73,7 @@ export const eliminarNodoAPI = (id) => {
 };
 
 export const eliminarAristaAPI = (id) => {
-    return fetch(root_url+"/aristas/{id}"+id, {
+    return fetch(root_url+"/aristas/"+id, {
         method: 'DELETE'
     }).then(response => {
         if (!response.ok) {
