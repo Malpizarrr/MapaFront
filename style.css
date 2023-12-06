@@ -1,0 +1,141 @@
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f4f4f4;
+	color: #333;
+}
+
+.container {
+	display: flex;
+	flex-wrap: no-wrap; /* No permitir que los hijos se envuelvan */
+	justify-content: space-between;
+	align-items: flex-start;
+	margin: 20px;
+	height: 100vh; /* Ajustar al alto de la pantalla */
+}
+
+.map-container {
+	flex: 1; /* Permitir que el mapa crezca */
+	height: 100%; /* Ajustar al alto del contenedor */
+	margin-right: 20px; /* Espaciado entre las columnas */
+}
+
+.formularios-tablas {
+	flex: 1; /* Permitir que este contenedor crezca */
+	padding: 20px;
+	overflow-y: auto; /* Permitir desplazamiento si el contenido es muy alto */
+	height: 100%; /* Ajustar al alto del contenedor */
+}
+
+h1 {
+	color: #4a90e2;
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+h2 {
+	color: #4a4a4a;
+	margin-top: 20px;
+}
+
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #555;
+}
+
+.form-group input, .form-group button {
+	width: 100%;
+	padding: 10px 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1em;
+}
+
+.form-group input:focus {
+	border-color: #4a90e2;
+	outline: none;
+	box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+.form-group button {
+	background-color: #5cb85c;
+	color: white;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.form-group button:hover {
+	background-color: #4cae4c;
+}
+
+.form-group-choose {
+	display: flex;
+	justify-content: center;
+	gap: 10px; /* Espacio entre los botones */
+	margin-bottom: 20px;
+}
+
+.form-group-choose button {
+	background-color: #4CAF50; /* Color de fondo verde */
+	color: white; /* Texto blanco */
+	padding: 10px 20px; /* Espaciado interno */
+	border: none; /* Sin bordes */
+	border-radius: 5px; /* Bordes redondeados */
+	cursor: pointer; /* Cursor en forma de mano */
+	font-size: 16px; /* Tamaño del texto */
+	transition: background-color 0.3s, transform 0.3s; /* Transición suave para el fondo y la transformación */
+}
+
+.form-group-choose button:hover {
+	background-color: #45a049; /* Color más oscuro al pasar el mouse */
+	transform: scale(1.05); /* Escala ligeramente más grande al pasar el mouse */
+}
+
+.form-group-choose button:active {
+	background-color: #3e8e41; /* Color aún más oscuro al hacer clic */
+	transform: scale(0.95); /* Escala ligeramente más pequeña al hacer clic */
+}
+
+.form-group-choose button:focus {
+	outline: none; /* Eliminar el contorno al enfocar */
+}
+
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+table, th, td {
+	border: 1px solid #ddd;
+}
+
+th, td {
+	padding: 12px 15px;
+	text-align: left;
+}
+
+th {
+	background-color: #f0f0f0;
+	font-weight: bold;
+	color: #333;
+}
+
+tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
